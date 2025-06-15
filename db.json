@@ -2,8 +2,53 @@
   "tasks": [
     {
       "id": 1,
-      "title": "Task1",
-      "Desc": "Make task 1 like"
+      "title": "Task 1",
+      "description": "Make task 1 like"
+    },
+    {
+      "id": 2,
+      "title": "Task 2",
+      "description": "Finish the report by evening"
+    },
+    {
+      "id": 3,
+      "title": "Task 3",
+      "description": "Clean up the component structure"
+    },
+    {
+      "id": 4,
+      "title": "Task 4",
+      "description": "Fix checkbox toggle logic"
+    },
+    {
+      "id": 5,
+      "title": "Task 5",
+      "description": "Write tests for reducers"
+    },
+    {
+      "id": 6,
+      "title": "Task 6",
+      "description": "Push updates to GitHub"
+    },
+    {
+      "id": 7,
+      "title": "Task 7",
+      "description": "Connect API to backend"
+    },
+    {
+      "id": 8,
+      "title": "Task 8",
+      "description": "Deploy app to Vercel"
+    },
+    {
+      "id": 9,
+      "title": "Task 9",
+      "description": "Refactor Redux store"
+    },
+    {
+      "id": 10,
+      "title": "Task 10",
+      "description": "Update styling for mobile view"
     }
   ]
 }
