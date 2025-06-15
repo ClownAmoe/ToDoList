@@ -1,9 +1,30 @@
 "use client";
 import { useState } from "react";
-import { CheckboxProps } from "./type";
+import Image from "next/image";
 
 export default function Checkbox() {
   const [isChecked, setIsChecked] = useState<boolean>(false);
+
+  const icon = (
+    <div className="relative w-10 h-10">
+      <Image
+        src="/heart.svg"
+        height={40}
+        width={40}
+        alt=""
+        className="contain absolute"
+      />
+      <Image
+        src="/heart-checked.svg"
+        height={40}
+        width={40}
+        alt=""
+        className={`contain duration-300 transition-opacity  absolute ${
+          isChecked ? "opacity-100" : "opacity-0"
+        }`}
+      />
+    </div>
+  );
   return (
     <label className="inline-flex items-center cursor-pointer">
       <input
@@ -12,7 +33,7 @@ export default function Checkbox() {
         checked={isChecked}
         onChange={() => setIsChecked((prev) => !prev)}
       />
-      <div className="w-6 h-6 rounded-full border-2 border-pink-600 peer-checked:bg-pink-600 transition-colors duration-300"></div>
+      {icon}
     </label>
   );
 }
