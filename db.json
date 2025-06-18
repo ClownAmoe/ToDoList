@@ -16,37 +16,37 @@
       "id": "3",
       "title": "Task 3",
       "description": "Clean up the component structure",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "4",
       "title": "Task 4",
       "description": "Fix checkbox toggle logic",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "5",
       "title": "Task 5",
       "description": "Write tests for reducers",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "6",
       "title": "Task 6",
       "description": "Push updates to GitHub",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "7",
       "title": "Task 7",
       "description": "Connect API to backend",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "8",
       "title": "Task 8",
       "description": "Deploy app to Vercel",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "9",
