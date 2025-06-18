@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { CheckboxProps } from "./type";
 
-export default function Checkbox() {
-  const [isChecked, setIsChecked] = useState<boolean>(false);
-
+export default function Checkbox(props: CheckboxProps) {
   const icon = (
     <div className="relative w-10 h-10">
       <Image
@@ -20,7 +19,7 @@ export default function Checkbox() {
         width={40}
         alt=""
         className={`contain duration-300 transition-opacity  absolute ${
-          isChecked ? "opacity-100" : "opacity-0"
+          props.checked ? "opacity-100" : "opacity-0"
         }`}
       />
     </div>
@@ -29,9 +28,9 @@ export default function Checkbox() {
     <label className="inline-flex items-center cursor-pointer">
       <input
         type="checkbox"
-        className="sr-only peer"
-        checked={isChecked}
-        onChange={() => setIsChecked((prev) => !prev)}
+        className="absolut peer hidden"
+        checked={props.checked}
+        onChange={props.onChange}
       />
       {icon}
     </label>

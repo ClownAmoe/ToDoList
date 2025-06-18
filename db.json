@@ -1,54 +1,64 @@
 {
   "tasks": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Task 1",
-      "description": "Make task 1 like"
+      "description": "Make task 1 like",
+      "isDone": false
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Task 2",
-      "description": "Finish the report by evening"
+      "description": "Finish the report by evening",
+      "isDone": false
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Task 3",
-      "description": "Clean up the component structure"
+      "description": "Clean up the component structure",
+      "isDone": false
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Task 4",
-      "description": "Fix checkbox toggle logic"
+      "description": "Fix checkbox toggle logic",
+      "isDone": false
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Task 5",
-      "description": "Write tests for reducers"
+      "description": "Write tests for reducers",
+      "isDone": false
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Task 6",
-      "description": "Push updates to GitHub"
+      "description": "Push updates to GitHub",
+      "isDone": false
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Task 7",
-      "description": "Connect API to backend"
+      "description": "Connect API to backend",
+      "isDone": false
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Task 8",
-      "description": "Deploy app to Vercel"
+      "description": "Deploy app to Vercel",
+      "isDone": false
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Task 9",
-      "description": "Refactor Redux store"
+      "description": "Refactor Redux store",
+      "isDone": false
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Task 10",
-      "description": "Update styling for mobile view"
+      "description": "Update styling for mobile view",
+      "isDone": false
     }
   ]
 }
