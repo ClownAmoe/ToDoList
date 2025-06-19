@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { CheckboxProps } from "./type";
+import { motion } from "motion/react";
 
 export default function Checkbox(props: CheckboxProps) {
   const icon = (

@@ -1,5 +1,6 @@
 import { ButtonProps, ButtonVariation } from "./type";
 import { CLASSNAME } from "./CLASSNAME";
+import { motion } from "motion/react";
 
 const variationToClass: Record<ButtonVariation, string> = {
   Add: CLASSNAME.ADD,
@@ -15,8 +16,13 @@ export default function Button({
   click,
 }: ButtonProps) {
   return (
-    <button className={variationToClass[variation]} type={type} onClick={click}>
+    <motion.button
+      whileHover={{ scale: 0.95 }}
+      className={variationToClass[variation]}
+      type={type}
+      onClick={click}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 }
