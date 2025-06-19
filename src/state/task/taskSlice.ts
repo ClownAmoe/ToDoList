@@ -39,7 +39,10 @@ const taskSlice = createSlice({
             item.isDone = action.payload.isDone;
           }
         }
-      );
+      )
+      .addCase(addTask.fulfilled, (state, action: PayloadAction<TaskProp>) => {
+        state.tasks.push(action.payload);
+      });
   },
 });
 
@@ -70,6 +73,22 @@ export const changeChecked = createAsyncThunk<
     return resp.data;
   } catch (e: any) {
     console.log(e);
+    return thunkAPI.rejectWithValue("Error" + e);
+  }
+});
+
+export const addTask = createAsyncThunk<
+  TaskProp,
+  TaskProp,
+  { rejectValue: string }
+>("task/addTask", async (newTask, thunkAPI) => {
+  try {
+    const resp = await axios.post<TaskProp>(
+      `http://localhost:3000/tasks/`,
+      newTask
+    );
+    return resp.data;
+  } catch (e: any) {
     return thunkAPI.rejectWithValue("Error" + e);
   }
 });

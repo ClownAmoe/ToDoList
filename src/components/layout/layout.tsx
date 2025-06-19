@@ -24,7 +24,7 @@ export default function Layout() {
           <motion.div
             layout
             initial={{
-              opacity: 0,
+              opacity: 1,
             }}
             whileHover={{ scale: 1.02 }}
             animate={{ opacity: 1, scale: 1 }}

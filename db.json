@@ -52,7 +52,7 @@
       "id": "9",
       "title": "Task 9",
       "description": "Refactor Redux store",
-      "isDone": true
+      "isDone": false
     },
     {
       "id": "10",
