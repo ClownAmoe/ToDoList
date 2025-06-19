@@ -2,9 +2,9 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Task 1",
-      "description": "Make task 1 like",
-      "isDone": true
+      "title": "Task1",
+      "description": "some descr",
+      "isDone": false
     },
     {
       "id": "2",
@@ -22,7 +22,7 @@
       "id": "4",
       "title": "Task 4",
       "description": "Fix checkbox toggle logic",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "5",
@@ -40,7 +40,7 @@
       "id": "7",
       "title": "Task 7",
       "description": "Connect API to backend",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "8",
@@ -59,6 +59,12 @@
       "title": "Task 10",
       "description": "Update styling for mobile view",
       "isDone": true
+    },
+    {
+      "id": 1,
+      "title": "Task1Again",
+      "description": "def",
+      "isDone": false
     }
   ]
 }

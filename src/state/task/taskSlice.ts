@@ -41,7 +41,11 @@ const taskSlice = createSlice({
         }
       )
       .addCase(addTask.fulfilled, (state, action: PayloadAction<TaskProp>) => {
-        state.tasks.push(action.payload);
+        if (state.tasks.find(() => action.payload.id)) {
+          alert("Cannot add with same id");
+        } else {
+          state.tasks.push(action.payload);
+        }
       });
   },
 });
