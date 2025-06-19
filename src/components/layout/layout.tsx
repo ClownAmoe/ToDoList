@@ -27,7 +27,7 @@ export default function Layout() {
               opacity: 1,
             }}
             whileHover={{ scale: 1.02 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ scale: 1 }}
             transition={{
               type: "spring",
             }}
