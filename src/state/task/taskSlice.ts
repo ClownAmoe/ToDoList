@@ -9,10 +9,12 @@ export type TaskProp = {
 
 type TaskState = {
   tasks: TaskProp[];
+  delMode: boolean;
 };
 
 const initialState: TaskState = {
   tasks: [],
+  delMode: false,
 };
 
 const taskSlice = createSlice({
@@ -22,6 +24,9 @@ const taskSlice = createSlice({
     // setTask: (state, action: PayloadAction<Task[]>) => {
     //   state.tasks = action.payload;
     // },
+    setDelMode: (state) => {
+      state.delMode = !state.delMode;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -42,6 +47,11 @@ const taskSlice = createSlice({
       )
       .addCase(addTask.fulfilled, (state, action: PayloadAction<TaskProp>) => {
         state.tasks.push(action.payload);
+      })
+      .addCase(delTask.fulfilled, (state, action: PayloadAction<number>) => {
+        state.tasks = state.tasks.filter(
+          (task) => Number(task.id) !== Number(action.payload)
+        );
       });
   },
 });
@@ -53,7 +63,13 @@ export const setTaskAsync = createAsyncThunk<
 >("task/setTaskAsync", async (_, thunkAPI) => {
   try {
     const resp = await axios.get<TaskProp[]>("http://localhost:3000/tasks");
-    return resp.data;
+
+    const tasksWithNumberId = resp.data.map((task) => ({
+      ...task,
+      id: Number(task.id),
+    }));
+
+    return tasksWithNumberId;
   } catch (e: any) {
     console.log(e);
     return thunkAPI.rejectWithValue("Error" + e);
@@ -92,6 +108,21 @@ export const addTask = createAsyncThunk<
     return thunkAPI.rejectWithValue("Error" + e);
   }
 });
-// export const { setTask } = taskSlice.actions;
+
+export const delTask = createAsyncThunk<
+  number,
+  number,
+  { rejectValue: string }
+>("task/delTask", async (id, thunkAPI) => {
+  try {
+    const resp = await axios.delete<TaskProp>(
+      `http://localhost:3000/tasks/${id}`
+    );
+    return id;
+  } catch (e: any) {
+    return thunkAPI.rejectWithValue("Error" + e);
+  }
+});
+export const { setDelMode } = taskSlice.actions;
 
 export default taskSlice.reducer;

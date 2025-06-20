@@ -7,6 +7,7 @@ const variationToClass: Record<ButtonVariation, string> = {
   Del: CLASSNAME.DEL,
   Conf: CLASSNAME.CONF,
   Decl: CLASSNAME.DEC,
+  Bucket: CLASSNAME.BUCKET
 };
 
 export default function Button({

@@ -1,4 +1,4 @@
-export type ButtonVariation = "Add" | "Del" | "Conf" | "Decl";
+export type ButtonVariation = "Add" | "Del" | "Conf" | "Decl" | "Bucket";
 
 export type ButtonProps = {
   children: React.ReactNode;

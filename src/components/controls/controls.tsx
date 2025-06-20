@@ -2,9 +2,14 @@ import { useState } from "react";
 import Button from "../button/button";
 import ModalAdd from "@/components/modalAdd/modalAdd";
 import { AnimatePresence, motion } from "motion/react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/state/store";
+import { setDelMode } from "@/state/task/taskSlice";
 
 export default function Controls() {
   const [show, setShow] = useState<boolean>(false);
+  const delMode = useSelector((state: RootState) => state.task.delMode);
+  const dispatch = useDispatch();
   return (
     <motion.div
       initial={{ opacity: 1 }}
@@ -39,7 +44,7 @@ export default function Controls() {
       <Button
         type="button"
         variation="Del"
-        click={() => console.log("Delete clicked")}
+        click={() => dispatch(setDelMode())}
       >
         Delete
       </Button>

@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "title": "Task 2",
-      "description": "Finish the report by evening",
-      "isDone": true
-    },
-    {
       "id": "3",
       "title": "Task 3",
       "description": "Clean up the component structure",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "4",
       "title": "Task 4",
       "description": "Fix checkbox toggle logic",
-      "isDone": true
+      "isDone": false
     },
     {
       "id": "5",
@@ -28,13 +22,13 @@
       "id": "6",
       "title": "Task 6",
       "description": "Push updates to GitHub",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": "7",
       "title": "Task 7",
       "description": "Connect API to backend",
-      "isDone": true
+      "isDone": false
     },
     {
       "id": "8",
@@ -50,7 +44,7 @@
     },
     {
       "id": "10",
-      "title": "wfdsfdsfsd",
+      "title": "Task 10",
       "description": "dsfdsfsdf",
       "isDone": false
     },
@@ -58,24 +52,12 @@
       "id": "1",
       "title": "Task1Again",
       "description": "def",
-      "isDone": false
+      "isDone": true
     },
     {
-      "id": "11",
-      "title": "fdsfdsf",
-      "description": "dsfdsfsdfds",
-      "isDone": false
-    },
-    {
-      "id": "12",
-      "title": "dsfsd",
-      "description": "dfsdfdsfsdfdsfs",
-      "isDone": false
-    },
-    {
-      "id": "13",
-      "title": "dsfsdf",
-      "description": "dsfsdfdsfsdf",
+      "id": 11,
+      "title": "Task 11",
+      "description": "dsfsdfds",
       "isDone": false
     }
   ]
