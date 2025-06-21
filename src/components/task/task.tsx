@@ -6,7 +6,6 @@ import { changeChecked, delTask, TaskProp } from "@/state/task/taskSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AnimatePresence, motion } from "motion/react";
 import { AppDispatch, RootState } from "@/state/store";
-import { setDelMode } from "@/state/task/taskSlice";
 import Image from "next/image";
 import Button from "../button/button";
 
