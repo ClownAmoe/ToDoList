@@ -27,6 +27,11 @@ const taskSlice = createSlice({
     setDelMode: (state) => {
       state.delMode = !state.delMode;
     },
+    toggleDoneLocal: (state, action: PayloadAction<number>) => {
+      state.tasks = state.tasks.map((task) =>
+        task.id === action.payload ? { ...task, isDone: !task.isDone } : task
+      );
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -123,6 +128,6 @@ export const delTask = createAsyncThunk<
     return thunkAPI.rejectWithValue("Error" + e);
   }
 });
-export const { setDelMode } = taskSlice.actions;
+export const { setDelMode, toggleDoneLocal } = taskSlice.actions;
 
 export default taskSlice.reducer;
